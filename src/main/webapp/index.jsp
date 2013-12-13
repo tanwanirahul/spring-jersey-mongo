@@ -6,6 +6,7 @@
         <li><a href="/rest/spring-hello">Hello</a></li>
         <li><a href="/rest/spring-singleton-hello">spring-singleton-hello</a></li>
         <li><a href="/rest/spring-singleton-hello?p1=foobar">exception</a></li>
+        <li><a href="/rest/persons">persons</a></li>
     </ul>
 </body>
 </html>

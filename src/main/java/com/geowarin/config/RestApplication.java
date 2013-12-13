@@ -40,6 +40,7 @@
 package com.geowarin.config;
 
 import com.geowarin.exception.CustomExceptionMapper;
+import com.geowarin.rest.PersonResource;
 import com.geowarin.rest.SpringRequestResource;
 import com.geowarin.rest.SpringSingletonResource;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -59,6 +60,7 @@ public class RestApplication extends ResourceConfig {
         register(RequestContextFilter.class);
         register(SpringSingletonResource.class);
         register(SpringRequestResource.class);
+        register(PersonResource.class);
         register(CustomExceptionMapper.class);
     }
 }
