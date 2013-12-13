@@ -1,6 +1,8 @@
 package com.geowarin.config;
 
+import com.geowarin.repository.PersonRepository;
 import com.mongodb.Mongo;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -12,8 +14,9 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  * @author Geoffroy Warin (http://geowarin.wordpress.com)
  */
 @Configuration
-@EnableMongoRepositories
-class ApplicationConfig extends AbstractMongoConfiguration {
+@EnableMongoRepositories(basePackageClasses = {PersonRepository.class})
+@ComponentScan(basePackages = {"com.geowarin.service"})
+public class ApplicationConfig extends AbstractMongoConfiguration {
 
     @Override
     public Mongo mongo() throws Exception {
